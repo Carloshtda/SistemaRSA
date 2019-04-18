@@ -1,7 +1,8 @@
 class InputTreatment:
+    '''Faz o tratamento de entrada para as mais diversas situações'''
     def __init__(self):
         self.input = 0
-
+    #Assegura um entrada Booleana
     def boolean_input(self):
         while True:
             print("Input True or False:")
@@ -18,6 +19,7 @@ class InputTreatment:
                 print('Wrong Input! Try Again.')
         return self.input
 
+    # Assegura entrada com strings que contenham apenas letras minúsculos e números.
     def message_input(self):
         while True:
             print("(Please use only lower case letters and numbers)")
@@ -32,6 +34,7 @@ class InputTreatment:
                 print('Input not supported! Try Again.')
         return self.input
 
+    # Assegura entrada com inteiros dentro dos limites definidos.
     def limited_int_input(self, bottom_lim, upper_lim):
         while True:
             print("Input a integer between {} and {}:".format(bottom_lim, upper_lim))

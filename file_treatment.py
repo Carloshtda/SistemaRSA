@@ -1,9 +1,10 @@
 class fileTreatment:
+    '''Faz o tratamento da manipulação das entradas e saídas por arquivos de texto'''
     def __init__(self):
         self.file = None
         self.users = []
         self.keys = []
-
+    #Lê o txt, e caso possua, dá valor aos atribbutos
     def read_file(self, file_name):
         try:
             self.file = open(file_name, 'r', encoding='utf8')
@@ -18,6 +19,8 @@ class fileTreatment:
             for i in range(1, len(content), 3):
                 self.users.append([content[i], content[i+1], content[i+2]])
         self.file.close()
+
+    # Salva as chaves atuais e os usuário, sendo os últimos de forma encriptda.
     def write_file(self, system_rsa, list_users, file_name):
         self.file = open(file_name, 'w')
         keys = system_rsa.keys_toString()

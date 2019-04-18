@@ -1,5 +1,6 @@
 import math
-
+'''Funções matemáticas mportantes para o código'''
+#Retorna True se o nuúmero é primos, senão, retorna False.
 def is_prime(num):
     if num == 1:
         return False
@@ -12,6 +13,8 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
+#Algorsmo Euclidiano Extendido.
 
 def aeext(a, b):
     """return (g, x, y) such that a*x + b*y = g = gcd(a, b)"""
